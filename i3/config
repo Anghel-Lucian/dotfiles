@@ -213,9 +213,9 @@ bar {
 	}
 }
 
-exec google-chrome
+exec firefox
 exec gnome-terminal
-exec code
+#exec code
 exec nautilus
-exec discord
-exec_always feh --bg-scale /home/lucian/Pictures/wallpaper.jpg
+#exec discord
+exec_always feh --bg-scale /home/lucian/Pictures/wallpaper.jpgs
