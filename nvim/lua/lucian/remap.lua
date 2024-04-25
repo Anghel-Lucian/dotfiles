@@ -43,4 +43,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- open the error message in a floating image to see it fully
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+
+-- insert lines below and above without entering in insert mode
+vim.keymap.set("n", "o", "o<ESC>")
+vim.keymap.set("n", "O", "O<ESC>")
