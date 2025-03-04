@@ -109,10 +109,10 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Browser"
-set $ws2 "2: Editor"
+set $ws2 "2: Notes"
 set $ws3 "3: Terminal"
 set $ws4 "4: Files"
-set $ws5 "5: Comm"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -143,11 +143,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-assign [class=Google-chrome] $ws1
-assign [class=Code] $ws2
+assign [class=LibreWolf] $ws1
+assign [class=Joplin] $ws2
 assign [class=Gnome-terminal] $ws3
 assign [class=Org.gnome.Nautilus] $ws4
-assign [class=discord] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -213,9 +212,8 @@ bar {
 	}
 }
 
-exec firefox
+exec librewolf 
+exec joplin-desktop
 exec gnome-terminal
-#exec code
 exec nautilus
-#exec discord
 exec_always feh --bg-scale /home/lucian/Pictures/wallpaper.jpgs
